@@ -1,0 +1,15 @@
+{
+  "name": "fake-family-tree",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "layers": "winrar a -afzip \".\\node_modules.zip\" \".\\node_modules\"",
+    "deploy": "npm run layers && sls deploy && del node_modules.zip",
+    "dev":"node --watch ./index.js"
+  },
+  "dependencies": {
+    "express": "4.18.2",
+    "serverless-http": "3.2.0"
+  }
+}

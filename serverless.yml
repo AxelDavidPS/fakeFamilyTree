@@ -1,0 +1,17 @@
+service: fake-family-tree
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  region: us-west-2
+  stage: dev
+  runtime: nodejs18.x
+
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'
+    layers:
+      - arn:aws:lambda:us-west-2:142720190287:layer:LayerExpress:13
